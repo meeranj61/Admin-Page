@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- title  -->
+    <title>Admin Page</title>
+    <link rel="icon" href="assets/img/title.png">
+
+    <!-- External css  -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- chart script  -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css" />
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>ACME</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li> <a href="#homeSubmenu"><i class="fa fa-fw fa-home"></i>Home</a>
+                </li>
+                <li> <a href="#"><i class="fa fa-delicious" aria-hidden="true"></i>
+                        Dashboard</a> </li>
+                <li> <a href="#pageSubmenu"><i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+                        Inbox</a>
+                    <span class="badge badge-danger" style="">New</span>
+                </li>
+                <li> <a href="#products"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                        Products</a> </li>
+                <li> <a href="#admin"><i class="fa fa-cog" aria-hidden="true"></i>
+                        Admin</a> </li>
+            </ul>
+        </nav>
+        <div class="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"> <i class="fa fa-align-left"
+                    id="sidebarCollapse"></i>
+
+                <div class="search">
+                    <i class="fa fa-search"></i>
+                    <span>Search transactions, invoices or help</span>
+                </div>
+                <div class="profile-icons">
+                    <div class="notification">
+                        <div class="btn-group drop" style="padding: 10px;">
+                            <span class="fa fa-bell-o" style="font-size: 18px;" aria-hidden="true"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>
+                            <div class='notification-dot'></div>
+                            <div class="dropdown-menu mt-3 border-0 dropdown-menu-right"
+                                aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <img src="assets/img/profile-pic-02.jpg" alt="profile2" class="profile2">
+                                            <span class="name1">Bavid kames</span>
+                                            <p class="assign">Assignt you want the call with sara</p>
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p>2 min ago</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item pt-3" href="#">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <img src="assets/img/profile-pic-06.jpg" alt="profile2" class="profile2">
+                                            <span class="name1">Bavid kames</span>
+                                            <p class="assign">Assignt you want the call with sara</p>
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p>2 min ago</p>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item pt-3" href="#">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <img src="assets/img/profile-pic-05.jpg" alt="profile2" class="profile2">
+                                            <span class="name1">Bavid kames</span>
+                                            <p class="assign">Assignt you want the call with sara</p>
+
+                                        </div>
+                                        <div class="col-md-3">
+                                            <p>2 min ago</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <span class="name">John Doe</span>
+                        <div class="btn-group" style="padding: 10px;">
+                            <i class="fa fa-angle-down pl-1 rotate" aria-hidden="true" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"></i>
+                            <img src="assets/img/profile-pic-01.jpg" alt="profile1" class="profile">
+                            <div class="dropdown-menu mt-3 border-0 dropdown-menu-right"
+                                aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#"><i class="fa fa-user-o" &nbsp &nbsp> </i><span
+                                        class="icon">My
+                                        Profile</span> </a>
+                                <a class="dropdown-item pt-3" href="#"><i class="fa fa-file-text" &nbsp &nbsp>
+                                    </i><span class="icon">Billing</span> </a>
+                                <a class="dropdown-item pt-3" href="#"><i class="fa fa-sign-out" &nbsp &nbsp>
+                                    </i><span class="icon">Logout</span> </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="content-wrapper">
+                <div class="overview">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4>Overview</h4>
+                            <button class="btn btn-primary" style="background: #6763E3;">Add Funds <i
+                                    class="fa fa-plus-circle pl-3"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-area-grabh">
+                    <div class="row">
+                        <div class="col-md-4 mt-4 order-1">
+                            <div class="card border-0" style="height: 383px;">
+                                <div class="card-body">
+                                    <h6>Statistics</h6>
+                                    <h6 style="float: right; margin-top: -30px;">Last 6 months
+                                        <i class="fa fa-angle-down"></i>
+                                    </h6>
+
+                                    <canvas id="myChart1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mt-4 order-2">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <h6>Sales Distribution</h6>
+                                    <div id="donut-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mt-4 order-sm-2">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <div class="profile text-center">
+                                        <div class="circle " style="margin: 0 auto;">
+                                            <img class="profile-pic" src="assets/img/profile-pic-01.jpg">
+                                        </div>
+                                        <div class="p-image">
+                                            <i class="fa fa-pencil upload-button"></i>
+                                            <input class="file-upload" type="file" accept="image/*" />
+
+                                        </div>
+                                        <div class="title pl-3">
+                                            <h6>Nick Herasimenka</h6>
+                                            <span>United States</span>
+                                        </div>
+                                        <div class="social pl-3">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="user">
+                                        <h6>Our Users</h6>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"
+                                            style="float: right; margin-top: -22px;"></i>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <img src="assets/img/profile-pic-03.jpg" alt="profile3"
+                                                    class="profile3">
+                                                <span class="name2">Drew James
+
+                                                </span>
+                                                <p class="assign">United States</p>
+                                                <span class="name3" style="float: right;">Mobile:8715674877</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <img src="assets/img/profile-pic-02.jpg" alt="profile3"
+                                                    class="profile3">
+                                                <span class="name2">Bavid kames</span>
+                                                <p class="assign">United States</p>
+                                                <span class="name3" style="float: right;">Mobile:8715674877</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <img src="assets/img/profile-pic-04.jpg" alt="profile3"
+                                                    class="profile3">
+                                                <span class="name2">Lavid Emes</span>
+                                                <p class="assign">United States</p>
+                                                <span class="name3" style="float: right;">Mobile:8715674877</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-side ">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="table-card ">
+                                <div class="card table-responsive">
+                                    <div class="card-body">
+                                        <h5>Referrer</h5>
+                                        <table class="table mt-3">
+                                            <thead class="thead" style="background-color: #F5F6FA; color: #A3A6B4;">
+                                                <tr>
+                                                    <th>Lacation</th>
+                                                    <th>Views</th>
+                                                    <th>sales</th>
+                                                    <th>Conversion</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>google.com</td>
+                                                    <td>3746</td>
+                                                    <td>752</td>
+                                                    <td>43%</td>
+                                                    <td>$19,291</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>facebook.com</td>
+                                                    <td>8126</td>
+                                                    <td>728</td>
+                                                    <td>32%</td>
+                                                    <td>$17,638</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>twitter.com</td>
+                                                    <td>8836</td>
+                                                    <td>694</td>
+                                                    <td>28%</td>
+                                                    <td>$16,218</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Direct,email,IM</td>
+                                                    <td>1173</td>
+                                                    <td>645</td>
+                                                    <td>24%</td>
+                                                    <td>$14,421</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>linked.com</td>
+                                                    <td>2739</td>
+                                                    <td>539</td>
+                                                    <td>20%</td>
+                                                    <td>$12,370</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mt-3">
+                            <div class="video-side">
+                                <div class="card" style="height: auto;">
+                                    <div class="card-body">
+                                        <h6>Product video</h6>
+                                        <i class="fa fa-ellipsis-v" aria-hidden="true"
+                                            style="float: right; margin-top: -22px;"></i>
+                                        <div class="embed-responsive embed-responsive-16by9 mt-3">
+                                            <iframe class="embed-responsive-item"
+                                                src="https://www.youtube.com/embed/v64KOxKVLVg"
+                                                allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#sidebarCollapse").on('click', function () {
+                $("#sidebar").toggleClass('active');
+            });
+        });
+
+
+        // line chart 
+        var xValues = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+
+        new Chart("myChart1", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    data: [4500, 2000, 3800, 5000, 4000, 7800],
+                    borderColor: "#B5B3FB",
+                    fill: false
+                }, {
+                    data: [6500, 700, 4500, 1800, 4000, 1800],
+                    borderColor: "#B0EAFF",
+                    fill: false
+                }]
+            },
+            options: {
+                legend: { display: false }
+            }
+        });
+        // end line chart 
+
+
+        // pie chart 
+        var chart = bb.generate({
+            data: {
+                columns: [
+                    ["B5B3FB", 3],
+                    ["orange", 2],
+                    ["green", 2],
+                    ["black", 2],
+                ],
+                type: "donut",
+                onclick: function (d, i) {
+                    console.log("onclick", d, i);
+                },
+                onover: function (d, i) {
+                    console.log("onover", d, i);
+                },
+                onout: function (d, i) {
+                    console.log("onout", d, i);
+                },
+            },
+            donut: {
+                title: "230,900  Sales"
+            },
+            bindto: "#donut-chart",
+        });
+        // end pie chart 
+
+
+        //   profile avadar 
+        $(document).ready(function () {
+
+            var readURL = function (input) {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('.profile-pic').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+
+            $(".file-upload").on('change', function () {
+                readURL(this);
+            });
+
+            $(".upload-button").on('click', function () {
+                $(".file-upload").click();
+            });
+        });
+
+        $(".rotate").click(function () {
+            $(this).toggleClass("down");
+        })
+        // end profile header
+    </script>
+
+</body>
+
+</html>
