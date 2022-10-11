@@ -1,0 +1,40 @@
+/* developed by : syed
+   affected page : navbar */
+
+@media(max-width:768px) {
+    #sidebar {
+        margin-left: -250px
+    }
+
+    #sidebar.active {
+        margin-left: 0px
+    }
+
+    #sidebarCollapse span {
+        display: none
+    }
+}
+
+@media(max-width:768px) {
+    .navbar .search span {
+        display: none;
+    }
+
+    .navbar .search .fa {
+        display: none;
+    }
+
+    .profile-icons .name {
+        display: none;
+    }
+
+
+}
+
+@media(max-width:768px) {
+    .table-side {
+        margin-top: 30%;
+    }
+}
+
+/* end navbar media query  */
